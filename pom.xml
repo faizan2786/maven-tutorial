@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>example.test</groupId>
+    <artifactId>mvn-test-projects</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging> <!-- type of build (target) file -->
+
+    <!-- variables to ref. throughout POM -->
+    <properties>
+        <junit.version>5.9.2</junit.version>
+    </properties>
+
+    <!-- add all the individual projects -->
+    <modules>
+        <module> Hypotenuse </module>
+        <module> RightAngleTriangle </module>
+    </modules>
+
+    <!-- add common plugins and dependencies (to be used by all projects) -->
+    <build>
+        <plugins>
+            <plugin>
+                <!-- The latest version of maven-compiler-plugin is used by Maven during compile phase by default.
+                    This example is to show how to use compiler plugin for custom configuration
+                    (i.e. to use version other than the latest or to change source/target jdk version) -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>20</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
