@@ -26,7 +26,8 @@
             <plugin>
                 <!-- The latest version of maven-compiler-plugin is used by Maven during compile phase by default.
                     This example is to show how to use compiler plugin for custom configuration
-                    (i.e. to use version other than the latest or to change source/target jdk version) -->
+                    (maybe, to use version other than the latest or to change source/target jdk version) -->
+                <!-- visit https://maven.apache.org/plugins/index.html for all available plugins and their latest versions -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>

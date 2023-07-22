@@ -28,10 +28,25 @@ public class RightAngleTriangle {
         return Hypotenuse.getHypotenuse(sideA, sideB);
     }
 
-    public static void main(String[] args)
+    public double getArea()
     {
-        RightAngleTriangle triangle = new RightAngleTriangle(3.0, 4.0);
-        double ten = triangle.getHypotenuse();
-        System.out.println("Hypotenuse is: " + ten);
+        return 0.5 * sideA * sideB;
+    }
+
+    public static void main(String[] args) throws IllegalArgumentException
+    {
+        System.out.print("Enter height h: ");
+        Double h = Double.parseDouble(System.console().readLine());
+
+        System.out.print("Enter base b: ");
+        Double b = Double.parseDouble(System.console().readLine());
+
+        if (b > h) {
+            throw new IllegalArgumentException("Base can not be greater than the height!");
+        }
+
+        RightAngleTriangle triangle = new RightAngleTriangle(h, b);
+        System.out.println("Hypotenuse is: " + triangle.getHypotenuse());
+        System.out.println("Area is: " + triangle.getArea());
     }
 }

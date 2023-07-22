@@ -11,4 +11,13 @@ public class Hypotenuse {
         }
         return Math.pow(a*a + b*b, 0.5);
     }
+
+    public static void main(String[] args)
+    {
+        System.out.print("Enter side a: ");
+        Double a = Double.parseDouble(System.console().readLine());
+        System.out.print("Enter side b: ");
+        Double b = Double.parseDouble(System.console().readLine());
+        System.out.println("Hypotenuse value is: " + getHypotenuse(a,b));
+    }
 }
